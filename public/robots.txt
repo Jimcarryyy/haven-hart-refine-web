@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://haven-hart-refine-web.vercel.app/sitemap.xml
+Sitemap: https://haven-hart.vercel.app/sitemap.xml
