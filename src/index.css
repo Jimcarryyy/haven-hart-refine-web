@@ -1,0 +1,109 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Haven & Hart Design System */
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 13.33%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13.33%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13.33%;
+
+    --primary: 0 0% 13.33%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 220 13% 91%;
+    --secondary-foreground: 0 0% 13.33%;
+
+    --muted: 220 13% 91%;
+    --muted-foreground: 0 0% 26.67%;
+
+    --accent: 218 11% 85%;
+    --accent-foreground: 0 0% 13.33%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 0% 13.33%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 26.67%;
+    --sidebar-primary: 0 0% 13.33%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 13% 91%;
+    --sidebar-accent-foreground: 0 0% 13.33%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-pearl text-charcoal font-inter;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .glass-button {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300;
+  }
+  
+  .luxury-gradient {
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(250,250,250,0.95) 100%);
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-charcoal to-slate bg-clip-text text-transparent;
+    padding-bottom: 0.12em;
+    line-height: 1.3;
+  }
+
+  .parallax-slow {
+    transform: translateY(calc(var(--scroll) * 0.5px));
+  }
+  
+  .parallax-fast {
+    transform: translateY(calc(var(--scroll) * -0.3px));
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
